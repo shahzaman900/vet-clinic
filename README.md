@@ -137,94 +137,66 @@ Before running this project, make sure you have the following prerequisites inst
 
 ### Setup
 
-Clone this repository to your desired folder:
+1. Clone this repository to your desired folder:
+
+   ```sh
+   git clone https://github.com/sheezu900/vet-clinic.git
+   ```
+
+2. Navigate to the project directory:
+
+    ```sh
+    cd vet_clinic
+    ```
+
+### Database set up
+
+Create a PostgreSQL database for the project (if not already created):
 
 ```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  createdb vet_clinic_db
+  psql -U your_username -d vet_clinic_db -a -f database/schema.sql
+
 ```
--
-
-### Install
-
-Install this project with:
-
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
 
 ### Usage
 
-To run the project, execute the following command:
-
-<!--
-Example command:
+To run the project:
 
 ```sh
-  rails server
+  npm start
 ```
---->
 
 ### Run tests
 
-To run tests, run the following command:
-
-<!--
-Example command:
+To run tests after setting up the linters, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  npx eslint "**/*.{js,jsx}"
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
 
 ```sh
-
+  npx stylelint "**/*.{css,scss}"
 ```
- -->
+## 👥 Author <a name="authors"></a>
+
+👤 **Agneta Pupienyte**
+
+- GitHub: [@githubhandle](https://github.com/sheezu900)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/shahzaman900/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
-
-> Mention all of the collaborators of this project.
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+As this project progresses, I plan to implement the following features:
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- **Create additional tables for related data.**
+- **Define relationships between tables.**
+- **Perform more advanced database operations, including joins.**
+
+Stay tuned for updates and enhancements to the vet clinic database!
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -234,17 +206,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Feel free to check the [issues page](https://github.com/sheezu900/vet-clinic/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -252,34 +214,15 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
+I would like to extend my heartfelt gratitude to Microverse for providing me with the opportunity to undertake this project. Additionally, I am immensely thankful to the code reviewers who takes the time to assess my work and provide valuable feedback, which greatly contributed to the refinement and success of the project. Your guidance and support have been invaluable throughout this endeavor, and I am truly grateful for your contributions.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
