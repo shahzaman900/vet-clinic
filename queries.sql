@@ -38,4 +38,33 @@ SET species = 'unspecified';
 SELECT * FROM animals;
 ROLLBACK;
 SELECT * FROM animals;
-COMMENT;
+-- ///////////////////////////////////////////////////////////
+BEGIN;
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon%';
+SELECT * FROM animals;
+UPDATE animals
+SET species = 'pokemon'
+WHERE species IS null;
+SELECT * FROM animals;
+COMMIT;
+-- ///////////////////////////////////////////////////////////
+BEGIN;
+TRUNCATE animals;
+SELECT * FROM animals;
+ROLLBACK;
+SELECT * FROM animals;
+-- //////////////////////////////////////////////////////////
+BEGIN;
+DELETE FROM animals
+WHERE date_of_birth > '2020-01-01';
+SAVEPOINT sp1;
+SELECT * FROM animals;
+UPDATE animals
+SET weight_kg = weight_kg * (-1);
+SELECT * FROM animals;
+ROLLBACK TO sp1;
+SELECT * FROM animals;
+COMMIT;
+-- //////////////////////////////////////////////////////////
