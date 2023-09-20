@@ -68,3 +68,21 @@ ROLLBACK TO sp1;
 SELECT * FROM animals;
 COMMIT;
 -- //////////////////////////////////////////////////////////
+SELECT count (*) FROM animals;
+-- -- /////////////////
+SELECT count (*) FROM animals
+WHERE escape_attempts = 0;
+-- -- //////////////////
+SELECT AVG(weight_kg) FROM animals;
+-- -- //////////////////
+SELECT neutered, COUNT(*) AS escape_count
+FROM animals
+WHERE escape_attempts > 0
+GROUP BY neutered;
+-- -- //////////////////
+SELECT max(weight_kg), min(weight_kg)
+FROM animals;
+-- ///////////////////////
+SELECT avg(escape_attempts)
+FROM animals
+WHERE date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01'
