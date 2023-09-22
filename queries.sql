@@ -86,3 +86,16 @@ FROM animals;
 SELECT avg(escape_attempts)
 FROM animals
 WHERE date_of_birth > '1990-01-01' AND date_of_birth < '2000-01-01'
+-- /////////////////////////////////////////////
+
+SELECT * FROM animals LEFT JOIN owners
+ON  owner_id = owners.id
+WHERE full_name = 'Melody Pond';
+
+SELECT * FROM animals LEFT JOIN species
+ON  species_id = species.id
+WHERE species.name = 'Pokemon';
+
+SELECT *
+FROM owners
+LEFT JOIN animals ON owners.id = animals.owner_id;
