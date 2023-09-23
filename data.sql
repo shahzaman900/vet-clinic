@@ -74,3 +74,28 @@ VALUES
 ('Maisy Smith', 26, '2019-01-17'),
 ('Stephanie Mendez', 64, '1981-05-04'),
 ('Jack Harkness', 38, '2008-06-08');
+
+-------------------- insert data in specializations table ---------------
+INSERT INTO specializations (species_id, vets_id)
+SELECT
+    species.id,
+    vets.id
+FROM vets
+JOIN species
+ON vets.name = 'William Tatcher' AND species.name = 'Pokemon';
+
+INSERT INTO specializations (species_id, vets_id)
+SELECT
+    species.id,
+    vets.id
+FROM vets
+JOIN species
+ON vets.name = 'Stephanie Mendez' AND species.name IN ('Pokemon', 'Digimon');
+
+INSERT INTO specializations (species_id, vets_id)
+SELECT
+    species.id,
+    vets.id
+FROM vets
+JOIN species
+ON vets.name = 'Jack Harkness' AND species.name = 'Digimon';
