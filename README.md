@@ -25,8 +25,6 @@
 
 # 📖 vet clinic <a name="about-project"></a>
 
-**vet clinic** is a...
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -44,14 +42,6 @@
 
 - **All the commands used are in the .sql files provided**
 - **Easy to use for future projects, as files have comments explaining what is where and how to use it**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link](comming soon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
