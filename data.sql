@@ -24,7 +24,7 @@ VALUES
 ('Jennifer Orwell', 19 ),
 ('Bob ', 45 ),
 ('Melody Pond', 14 ),
-('Melody Pond', 14 ),
+('Dean Winchester', 14 ),
 ('Jodie Whittaker', 38 );
 
 INSERT INTO species(name)
@@ -33,10 +33,9 @@ VALUES
 ('Digimon');
 
 
-UPDATE animals AS a
-SET species_id = s.id
-FROM species AS s
-WHERE a.name LIKE '%mon%' AND s.name = 'Digimon';
+ UPDATE animals
+   SET species_id = (SELECT id from species WHERE name = 'Digimon')
+   WHERE name like '%mon';
 
 UPDATE animals AS a
 SET species_id = s.id
