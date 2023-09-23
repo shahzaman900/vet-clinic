@@ -44,3 +44,36 @@ ADD COLUMN owner_id INT,
 ADD CONSTRAINT fk_owner
 FOREIGN KEY (owner_id)
 REFERENCES owners(id)
+
+----------------------------------------------
+-- Relationship
+-- one to one -- one to many -- many to many
+----------------------------------------------
+
+
+-- --------------  Create Vets Table --------------
+CREATE TABLE vets(
+  id SERIAL PRIMARY KEY NOT NULL,
+  name VARCHAR(50),
+  age INT,
+  date_of_graduation date
+)
+
+-----------  Create Specialization table for species and vets relationship ------------
+CREATE TABLE specializations(
+  species_id INT,
+  vets_id INT,
+  PRIMARY KEY (species_id, vets_id),
+  CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
+  CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
+
+-----------  Create visits table for animals and vets relationship ------------
+CREATE TABLE visits(
+  animal_id INT,
+  vets_id INT,
+  visit_date date,
+  PRIMARY KEY (animal_id, vets_id),
+  CONSTRAINT fk_animals FOREIGN KEY(animal_id) REFERENCES animals(id),
+  CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
