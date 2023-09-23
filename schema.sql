@@ -50,9 +50,20 @@ REFERENCES owners(id)
 -- one to one -- one to many -- many to many
 ----------------------------------------------
 
+
+-- --------------  Create Vets Table --------------
 CREATE TABLE vets(
   id SERIAL PRIMARY KEY NOT NULL,
   name VARCHAR(50),
   age INT,
   date_of_graduation date
 )
+
+-----------  Create Specialization table for species and vets relationship ------------
+CREATE TABLE specializations(
+  species_id INT,
+  vets_id INT,
+  PRIMARY KEY (species_id, vets_id),
+  CONSTRAINT fk_species FOREIGN KEY(species_id) REFERENCES species(id),
+  CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id)
+);
