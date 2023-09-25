@@ -83,6 +83,9 @@ CREATE TABLE visits(
 ---------------------------------------
 --
 
-
+------------ add column in owners table --------------
 ALTER TABLE owners
 ADD COLUMN email VARCHAR(50);
+
+
+
