@@ -106,10 +106,15 @@ To run tests after setting up the linters, run the following command:
 ```
 ## 👥 Author <a name="authors"></a>
 
-👤 **Agneta Pupienyte**
+👤 **Shah Zaman**
 
 - GitHub: [@githubhandle](https://github.com/sheezu900)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/shahzaman900/)
+
+👤 **Tanmayi Manku**
+
+- GitHub: [@githubhandle](https://github.com/tan12082001)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/tanmayi-manku-99195720a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
