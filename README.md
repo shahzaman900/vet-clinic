@@ -23,6 +23,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
+Database Diagram
+https://drawsql.app/teams/microverse-115/diagrams/vet-clinic-schema-diagram
+
+<img src='./vet clinic database diagram.png'></img>
+
 # 📖 vet clinic <a name="about-project"></a>
 
 ## 🛠 Built With <a name="built-with"></a>
